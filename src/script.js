@@ -20,7 +20,9 @@ $(document).ready(function () {
 
   const banMap = (event) => {
     event.target.removeEventListener("click", banMap);
-    // vetado
+
+    event.currentTarget.classList.add("selected");
+    event.currentTarget.querySelector("dl").innerText = "Banido";
 
     const bannedMap = event.currentTarget.querySelector(".map-name").innerText;
     remainingMaps = remainingMaps.filter((map) => map != bannedMap);

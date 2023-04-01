@@ -92,14 +92,14 @@ header > h1 {
   border-radius: 8px;
   background-position: center;
 
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
 }
 
-.card-container:hover {
+.card-container.hover {
   border: 6px solid #E22859;
 }
 
-.card-container:hover .card{
+.card-container.hover .card{
   opacity: 1;
   transition: opacity 0.6s;  
 }
@@ -152,6 +152,15 @@ header > h1 {
   height: 60px;
   background-color: #E22859;
   border-radius: 30px;
+}
+
+.selected {
+  cursor: not-allowed;
+}
+
+.card-container:hover .card, .selected {
+  opacity: 1;
+  border: 6px solid #E22859;
 }
 
 .de_cache {
