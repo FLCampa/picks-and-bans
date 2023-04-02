@@ -91,17 +91,15 @@ header > h1 {
   cursor: pointer;
   border-radius: 8px;
   background-position: center;
-
-  /* border: 2px solid #000; */
 }
 
 .card-container.hover {
   border: 6px solid #E22859;
 }
 
-.card-container.hover .card{
+.card-container:hover .card{
   opacity: 1;
-  transition: opacity 0.6s;  
+  transition: opacity 0.6s;
 }
 
 .card {
@@ -114,9 +112,11 @@ header > h1 {
 
   width: 100%;
   height: 100%;
+
   opacity: 0;
   border-radius: 8px;
   padding: 12px;
+  border: 6px solid #E22859;
 }
 
 .card > dl {
@@ -158,9 +158,17 @@ header > h1 {
   cursor: not-allowed;
 }
 
-.card-container:hover .card, .selected {
+.card-container.selected .card {
   opacity: 1;
-  border: 6px solid #E22859;
+}
+
+.card-container.selected {
+  filter: grayscale(1);
+}
+
+.card-container.picked {
+  border: 6px solid green;
+  pointer-events: none;
 }
 
 .de_cache {

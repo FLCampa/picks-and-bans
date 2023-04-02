@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   let remainingMaps = ["CACHE", "COBBLESTONE", "INFERNO", "MIRAGE", "TRAIN"];
 
-  const maps = $(".card");
+  const maps = $(".card-container");
 
   const teamTurnText = $("#teamPick");
 
@@ -19,7 +19,9 @@ $(document).ready(function () {
   changeTeamTurnInnerText();
 
   const banMap = (event) => {
-    event.target.removeEventListener("click", banMap);
+    console.log(event.currentTarget);
+
+    event.currentTarget.removeEventListener("click", banMap);
 
     event.currentTarget.classList.add("selected");
     event.currentTarget.querySelector("dl").innerText = "Banido";
@@ -27,12 +29,14 @@ $(document).ready(function () {
     const bannedMap = event.currentTarget.querySelector(".map-name").innerText;
     remainingMaps = remainingMaps.filter((map) => map != bannedMap);
 
-    console.log(remainingMaps);
-
     if (remainingMaps.length === 1) {
-      const choosenMap = document.querySelector(".card:not(.selected)");
+      const choosenMap = document.querySelector(
+        ".card-container:not(.selected)"
+      );
       choosenMap.removeEventListener("click", banMap);
       choosenMap.classList.add("picked", "disable-hover");
+
+      console.log(event.currentTarget.parentNode);
 
       changeTeamTurnInnerText(remainingMaps[0]);
 
