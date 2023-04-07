@@ -2,18 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const firstTeamName = "Campa";
   const secondTeamName = "Fallen";
 
+  document.querySelector("#firstTeamName").innerHTML = firstTeamName;
+  document.querySelector("#secondTeamName").innerHTML = secondTeamName;
+
   let teamTurn = firstTeamName;
 
   let remainingMaps = ["CACHE", "COBBLESTONE", "INFERNO", "MIRAGE", "TRAIN"];
 
-  const maps = document.querySelectorAll(".card-container");
+  const mapCards = document.querySelectorAll("article");
 
-  const teamTurnText = document.querySelector("#teamPick");
+  const teamTurnText = document.querySelector("#teamTurnText");
 
-  const changeTeamTurnInnerText = (t = 0) => {
-    t === 0
+  const changeTeamTurnInnerText = (choosenMap = null) => {
+    !choosenMap
       ? (teamTurnText.innerText = `É a vez do time ${teamTurn} banir o mapa`)
-      : (teamTurnText.innerHTML = `O mapa do jogo será ${t}`);
+      : (teamTurnText.innerHTML = `O mapa do jogo será ${choosenMap}`);
   };
 
   changeTeamTurnInnerText();
@@ -24,13 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
     event.currentTarget.classList.add("selected");
     event.currentTarget.querySelector("div > span").innerText = "Banido";
 
-    const bannedMap = event.currentTarget.querySelector(".map-name").innerText;
+    const bannedMap = event.currentTarget.querySelector("h3").innerText;
     remainingMaps = remainingMaps.filter((map) => map != bannedMap);
 
     if (remainingMaps.length === 1) {
-      const choosenMap = document.querySelector(
-        ".card-container:not(.selected)"
-      );
+      const choosenMap = document.querySelector("article:not(.selected)");
       choosenMap.removeEventListener("click", banMap);
       choosenMap.classList.add("picked");
 
@@ -44,5 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
     changeTeamTurnInnerText();
   };
 
-  maps.forEach((map) => map.addEventListener("click", banMap));
+  mapCards.forEach((map) => map.addEventListener("click", banMap));
 });
