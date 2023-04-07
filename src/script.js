@@ -1,26 +1,24 @@
-$(document).ready(function () {
-  const firstTeamName = "Fallen";
-  const secondTeamName = "Campa";
+document.addEventListener("DOMContentLoaded", function () {
+  const firstTeamName = "Campa";
+  const secondTeamName = "Fallen";
 
-  let teamPick = firstTeamName;
+  let teamTurn = firstTeamName;
 
   let remainingMaps = ["CACHE", "COBBLESTONE", "INFERNO", "MIRAGE", "TRAIN"];
 
-  const maps = $(".card-container");
+  const maps = document.querySelectorAll(".card-container");
 
-  const teamTurnText = $("#teamPick");
+  const teamTurnText = document.querySelector("#teamPick");
 
   const changeTeamTurnInnerText = (t = 0) => {
     t === 0
-      ? teamTurnText.html(`É a vez do time ${teamPick} banir o mapa`)
-      : teamTurnText.html(`O mapa do jogo será ${t}`);
+      ? (teamTurnText.innerText = `É a vez do time ${teamTurn} banir o mapa`)
+      : (teamTurnText.innerHTML = `O mapa do jogo será ${t}`);
   };
 
   changeTeamTurnInnerText();
 
   const banMap = (event) => {
-    console.log(event.currentTarget);
-
     event.currentTarget.removeEventListener("click", banMap);
 
     event.currentTarget.classList.add("selected");
@@ -34,21 +32,17 @@ $(document).ready(function () {
         ".card-container:not(.selected)"
       );
       choosenMap.removeEventListener("click", banMap);
-      choosenMap.classList.add("picked", "disable-hover");
-
-      console.log(event.currentTarget.parentNode);
+      choosenMap.classList.add("picked");
 
       changeTeamTurnInnerText(remainingMaps[0]);
 
       return;
     }
 
-    teamPick = teamPick === firstTeamName ? secondTeamName : firstTeamName;
+    teamTurn = teamTurn === firstTeamName ? secondTeamName : firstTeamName;
 
     changeTeamTurnInnerText();
   };
 
-  for (let index = 0; index < maps.length; index++) {
-    maps[index].addEventListener("click", banMap);
-  }
+  maps.forEach((map) => map.addEventListener("click", banMap));
 });
