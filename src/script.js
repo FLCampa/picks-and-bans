@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.currentTarget.removeEventListener("click", banMap);
 
     event.currentTarget.classList.add("selected");
-    event.currentTarget.querySelector("dl").innerText = "Banido";
+    event.currentTarget.querySelector("div > span").innerText = "Banido";
 
     const bannedMap = event.currentTarget.querySelector(".map-name").innerText;
     remainingMaps = remainingMaps.filter((map) => map != bannedMap);

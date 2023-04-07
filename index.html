@@ -3,92 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" type="image/x-icon" href="/src/images/cs2-favicon.ico" />
+    <link rel="stylesheet" href="./src/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pick'n Ban</title>
+
     <script src="./src/script.js"></script>
+
+    <title>Pick'n Ban</title>
   </head>
   <body>
-    <div class="container">
-      <div class="cs-logo-container">
-        <img
-          src="./src//images/logo_cs_full_blk.svg"
-          width="300"
-          height="70"
-          alt="cs logo"
-        />
-      </div>
+    <figure>
+      <img
+        src="./src/images/logo_cs_full_blk.svg"
+        width="300"
+        height="70"
+        alt="cs logo"
+      />
+    </figure>
 
-      <header>
-        <h1 id="equipe1">Equipe 1</h1>
-        <span>vs</span>
-        <h1 id="equipe1">Equipe 2</h1>
-      </header>
+    <header>
+      <h1>Equipe 1</h1>
+      <span>vs</span>
+      <h1>Equipe 2</h1>
+    </header>
 
-      <div class="match">
-        <hr class="line" />
+    <section>
+      <hr />
 
-        <h2 id="teamPick">É a vez da equipe banir o mapa</h2>
+      <h2 id="teamPick">É a vez da equipe banir o mapa</h2>
 
-        <hr class="line" />
-      </div>
+      <hr />
+    </section>
 
-      <div class="picks-container">
-        <div class="card-container de_cache">
-          <div class="card">
-            <dl>Banir</dl>
+    <main class="picks-container">
+      <article class="card-container de_cache">
+        <div class="card">
+          <span>Banir</span>
 
-            <i class="fas fa-times"></i>
-          </div>
-
-          <dt class="map-name">CACHE</dt>
+          <i class="fas fa-times"></i>
         </div>
 
-        <div class="card-container de_cobblestone">
-          <div class="card">
-            <dl>Banir</dl>
+        <h3 class="map-name">CACHE</h3>
+      </article>
 
-            <i class="fas fa-times"></i>
-          </div>
+      <article class="card-container de_cobblestone">
+        <div class="card">
+          <span>Banir</span>
 
-          <dt class="map-name">COBBLESTONE</dt>
+          <i class="fas fa-times"></i>
         </div>
 
-        <div class="card-container de_inferno">
-          <div class="card">
-            <dl>Banir</dl>
+        <h3 class="map-name">COBBLESTONE</h3>
+      </article>
 
-            <i class="fas fa-times"></i>
-          </div>
+      <article class="card-container de_inferno">
+        <div class="card">
+          <span>Banir</span>
 
-          <dt class="map-name">INFERNO</dt>
+          <i class="fas fa-times"></i>
         </div>
 
-        <div class="card-container de_mirage">
-          <div class="card">
-            <dl>Banir</dl>
+        <h3 class="map-name">INFERNO</h3>
+      </article>
 
-            <i class="fas fa-times"></i>
-          </div>
+      <article class="card-container de_mirage">
+        <div class="card">
+          <span>Banir</span>
 
-          <dt class="map-name">MIRAGE</dt>
+          <i class="fas fa-times"></i>
         </div>
 
-        <div class="card-container de_train">
-          <div class="card">
-            <dl>Banir</dl>
+        <h3 class="map-name">MIRAGE</h3>
+      </article>
 
-            <i class="fas fa-times"></i>
-          </div>
+      <article class="card-container de_train">
+        <div class="card">
+          <span>Banir</span>
 
-          <dt class="map-name">TRAIN</dt>
+          <i class="fas fa-times"></i>
         </div>
-      </div>
-    </div>
+
+        <h3 class="map-name">TRAIN</h3>
+      </article>
+    </main>
   </body>
 </html>
