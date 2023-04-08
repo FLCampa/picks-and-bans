@@ -1,1 +1,1 @@
-## Deployed [here](https://campa-twitter-ui-clone.netlify.app).
+## Deployed [here](https://campa-picks-and-bans.netlify.app).
