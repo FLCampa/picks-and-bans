@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /*
 CSS Organization {
@@ -24,10 +24,12 @@ body {
   min-height: 100vh;
   padding: 14px 82px;
   background: #D9D9D9;
-  background-image: url("images/cs2-header-bg.svg");
+  background-image: url("/src/assets/images/cs2_header_bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  position: relative;
 
   font-family: 'Roboto', sans-serif;
   color: #000;
@@ -47,13 +49,13 @@ header {
   margin: 46px 0;
 }
 
+header > h1 {
+  font-size: 40px;
+}
+
 header > span {
   font-size: 32px;
   font-weight: 600;
-}
-
-header > h1 {
-  font-size: 40px;
 }
 
 section {
@@ -61,11 +63,8 @@ section {
   justify-content: center;
   align-items: center;
 
+  height: 62px;
   margin-bottom: 28px;
-}
-
-section > h2 {
-  margin: 16px;
 }
 
 hr {
@@ -133,18 +132,6 @@ article:hover .card-hover{
   border-radius: 8px 8px 0 0;
 }
 
-h3 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  height: 100%;
-  padding-bottom: 16px;
-
-  font-size: 30px;
-  color: #fff;
-}
-
 .card-hover i {
   display: flex;
   align-items: center;
@@ -159,6 +146,18 @@ h3 {
   color: #fff;
 
   border-radius: 30px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  height: 100%;
+  padding-bottom: 16px;
+
+  font-size: 30px;
+  color: #fff;
 }
 
 .selected {
@@ -178,22 +177,22 @@ article.picked {
   border: 6px solid #1EB720;
 }
 
-.de_cache {
-  background-image: url("images/de_cache.jpg");
+.de-cache {
+  background-image: url("/src/assets/images/de_cache.jpg");
 }
 
-.de_cobblestone {
-  background-image: url("images/de_cobblestone.jpg");
+.de-cobblestone {
+  background-image: url("/src/assets/images/de_cobblestone.jpg");
 }
 
-.de_inferno {
-  background-image: url("images/de_inferno.jpg");
+.de-inferno {
+  background-image: url("/src/assets/images/de_inferno.jpg");
 }
 
-.de_mirage {
-  background-image: url("images/de_mirage.jpg");
+.de-mirage {
+  background-image: url("/src/assets/images/de_mirage.jpg");
 }
 
-.de_train {
-  background-image: url("images/de_train.jpg");
+.de-train {
+  background-image: url("/src/assets/images/de_train.jpg");
 }

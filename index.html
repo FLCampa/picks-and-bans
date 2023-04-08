@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/x-icon" href="/src/images/cs2-favicon.ico" />
-    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <link rel="stylesheet" href="./src/styles/custom_prompt.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-    <script src="./src/script.js"></script>
+    <script src="./src/functions/script.js"></script>
 
     <title>Pick'n Ban</title>
   </head>
   <body>
     <figure>
       <img
-        src="./src/images/logo_cs_full_blk.svg"
+        src="/src/assets/icons/logo_cs_full_blk.svg"
         width="300"
         height="70"
         alt="cs logo"
@@ -27,21 +28,17 @@
     </figure>
 
     <header>
-      <h1 id="firstTeamName">Equipe 1</h1>
+      <h1 id="first-team-name">Time 1</h1>
       <span>vs</span>
-      <h1 id="secondTeamName">Equipe 2</h1>
+      <h1 id="second-team-name">Time 2</h1>
     </header>
 
     <section>
       <hr />
-
-      <h2 id="teamTurnText">É a vez da equipe banir o mapa</h2>
-
-      <hr />
     </section>
 
     <main>
-      <article class="de_cache">
+      <article class="de-cache">
         <div class="card-hover">
           <span>Banir</span>
 
@@ -51,7 +48,7 @@
         <h3>CACHE</h3>
       </article>
 
-      <article class="de_cobblestone">
+      <article class="de-cobblestone">
         <div class="card-hover">
           <span>Banir</span>
 
@@ -61,7 +58,7 @@
         <h3>COBBLESTONE</h3>
       </article>
 
-      <article class="de_inferno">
+      <article class="de-inferno">
         <div class="card-hover">
           <span>Banir</span>
 
@@ -71,7 +68,7 @@
         <h3>INFERNO</h3>
       </article>
 
-      <article class="de_mirage">
+      <article class="de-mirage">
         <div class="card-hover">
           <span>Banir</span>
 
@@ -81,7 +78,7 @@
         <h3>MIRAGE</h3>
       </article>
 
-      <article class="de_train">
+      <article class="de-train">
         <div class="card-hover">
           <span>Banir</span>
 
@@ -91,5 +88,14 @@
         <h3>TRAIN</h3>
       </article>
     </main>
+
+    <!-- CUSTOM PROMPT -->
+    <div class="custom-prompt">
+      <div class="prompt-text"></div>
+      <input type="text" class="prompt-input" />
+      <div class="button-container">
+        <button class="prompt-button">Beleza</button>
+      </div>
+    </div>
   </body>
 </html>
