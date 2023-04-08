@@ -35,7 +35,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     : "2";
 
   let section = document.querySelector("section");
-  section.innerHTML = `<hr /><h2 id="team-turn-text">É a vez do time banir o mapa</h2><hr />`;
+  section.innerHTML = `
+    <hr />
+      <h2 id="team-turn-text" style="padding: 0 18px;">
+        É a vez do time banir o mapa
+      </h2>
+    <hr />
+  `;
 
   let teamTurn = firstTeamName;
 
